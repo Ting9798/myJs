@@ -6,7 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    <p>123456</p>
-    test
+    <!-- 變數宣告  -->
+    <script>
+        //var 變數名稱 (不嚴謹的宣告) =>允許同個檔案中有重複變數宣告
+        //let 變數宣告 (嚴謹的宣告)   =>不允許同檔案中有重複變數宣告
+        //const 常數 =>一旦建立無法更改
+
+        //數值變數
+        let price;  //建立price變數
+        price=100;  //給值
+        let qty=1;  //建立qty變數的同時給值
+
+        //傳統串接
+        /*console.log('單價:' + price + '元');
+        console.log('數量:' + qty);  
+        console.log('小計:' + price*qty + '元');*/
+
+        //字串字面值串接資料(頭尾加上``)
+        //字串 =>遇到變數或運算式要加上${變數或運算式}
+        console.log(`單價:${price}元`);
+        console.log(`數量:${qty}`);
+        console.log(`小計:${price*qty}元`);
+    </script>
 </body>
 </html>

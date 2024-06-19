@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 字串變數 -->
+    <script>
+        let strName = '吶吶';
+        console.log(`名字:${strName}`);
+        let catAge = 8; //數值類型
+        console.log(`年齡:${catAge}歲`);
+        catAge = '8';   //字串類型
+        
+        //取得資料型態=>typeof(變數名)
+        console.log(typeof(catAge));
+        
+        //未轉換為數值
+        console.log(`五年後年齡:${catAge+5}歲`);
+        
+        //暫時轉換為數值
+        console.log(`五年後年齡:${Number(catAge)+5}歲`);
+        console.log(typeof(catAge));
+        
+        //將catAge重新指派為數值
+        catAge=Number(catAge);
+        console.log(`五年後年齡:${catAge+5}歲`);
+        console.log(typeof(catAge));
+        
+        //float浮點數 => 帶有小數點的資料
+        let pi = 3.14;
+        let r = 7;
+        let area = pi*r*r;
+        console.log(area);
+        console.log(parseInt(area));      //無條件捨去
+        console.log(area.toFixed(2)+1);   //取小數點後兩位，資料回傳後會變字串型態
+        console.log(Number(area.toFixed(2))+1);   //將字串轉換為數值
+        
+
+    </script>
+</body>
+</html>

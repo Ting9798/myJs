@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //預設帳號:abc 密碼:1234
+        //帳號密碼正確 = 帳密OK
+        //帳號對密碼錯 = 密碼err
+        //帳號錯密碼對 = 帳號err
+        //帳號錯密碼錯 = 帳密err
+
+        let userId = 'abc';
+        let userPw = '1234';
+
+        //比較運算子 (左右兩邊會有值或變數)
+        //相等  === or ==
+        //不相等!= 
+
+        //多層條件檢查
+        /*
+        if (userId == 'abc' && userPw == '1234') {
+            console.log(`帳密OK`);
+        } else if (userId == 'abc' && userPw != '1234') {
+            console.log(`密碼err`);
+        } else if (userId != 'abc' && userPw == '1234') {
+            console.log(`帳號err`);
+        } else if (userId != 'abc' && userPw != '1234') {
+            console.log(`帳密err`);
+        }
+        */
+
+        if (userId == 'abc' && userPw == '1234') {
+            console.log(`帳密OK`);
+        } else if (userId == 'abc' && userPw != '1234') {
+            console.log(`密碼err`);
+        } else if (userId != 'abc' && userPw == '1234') {
+            console.log(`帳號err`);
+        } else {
+            console.log(`帳密err`);
+        }
+
+        //單層條件檢查 (資源用的比較多)
+        if (userId == 'abc' && userPw == '1234') {
+            console.log(`帳密OK`);
+        } 
+        if (userId == 'abc' && userPw != '1234') {
+            console.log(`密碼err`);
+        } 
+        if (userId != 'abc' && userPw == '1234') {
+            console.log(`帳號err`);
+        } 
+        if (userId != 'abc' && userPw != '1234') {
+            console.log(`帳密err`);
+        }
+    </script>
+</body>
+
+</html>

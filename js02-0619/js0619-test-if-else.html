@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 計算bmi -->
+    <script>
+        let weigh = 70;
+        let high = 1.8;
+        let bmi = weigh / (high * high);
+        console.log(`我的體重:${weigh}公斤`);
+        console.log(`我的身高:${high * 100}公分`);
+
+        bmi = bmi.toFixed(2);
+        bmi = Number(bmi);
+        console.log(`我的BMI為${bmi}`);
+        console.log(typeof (bmi));
+
+        //if else巢狀式寫法
+        if (bmi < 18.5) {
+            console.log(`體重過輕`)
+        } else {
+            if (bmi >= 18.5 && bmi < 24) {
+                console.log(`正常範圍`);
+            } else {
+                if (bmi >= 24 && bmi < 27) {
+                    console.log(`異常範圍:過重`);
+                } else {
+                    if (bmi >= 27 && bmi < 30) {
+                        console.log(`異常範圍:輕度肥胖`);
+                    } else {
+                        if (bmi >= 30 && bmi < 35) {
+                            console.log(`異常範圍:中度肥胖`)
+
+                        } else {
+                            if (bmi >= 35) {
+                                console.log(`異常範圍:重度肥胖`)
+                            }
+                        }
+
+                    }
+
+                }
+
+
+            }
+        }
+    </script>
+</body>
+
+</html>
