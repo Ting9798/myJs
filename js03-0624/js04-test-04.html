@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let score;
+        score = prompt(`請輸入分數:`);
+        
+        //將字串轉數值
+        let intScore=Number(score);
+        
+        if (score == null) {
+            console.log('請確定分數');
+        } else if (score == '') {
+            console.log('請填入分數');
+        } else if (intScore < 0 || intScore > 100) {
+            console.log(`${score}非有效分數`);
+        } else if (intScore >= 60) {
+            console.log('及格');
+        } else if (intScore < 60) {
+            console.log('不及格');
+        } else {
+            //以上條件皆不成立
+            console.log('分數輸入錯誤');
+        }
+    </script>
+</body>
+
+</html>

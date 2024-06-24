@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let score;
+        score = prompt(`請輸入分數:`);
+
+        // console.log(score);
+
+        // && (AND) 是聯集
+        // || (OR)  是交集
+        //檢查是否取消
+        if (score == null) {
+            console.log(`請輸入分數`);
+        } else {
+            if (score == "") {
+                console.log(`分數不能空白`);
+            } else {
+                //檢查是否在有效範圍
+                score = Number(score);
+                // console.log(score);
+                //檢查是否為非數值字串轉換後為NaN
+                if (isNaN(score)) {
+                    console.log(`請輸入分數`);
+                } else {
+                    if (score < 0 || score > 100) {
+                        console.log(`${score}不是有效分數`)
+                    } else {
+                        //檢查是否及格
+                        if (score >= 60) {
+                            console.log(`及格`);
+                        } else {
+                            console.log(`不及格`);
+                        }
+                    }
+                }
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
