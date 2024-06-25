@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //promtp()=>回傳為字串型態 
+        let week = prompt('請輸入星期別代號:', '1-7');
+        //length=>資料的長度
+        console.log(week.lenght);
+        switch (week) {
+            case null: /* 取消時會回傳空值 */
+                document.write('請按確定');
+                break;
+            case '': /* 沒有填寫任何資料 */
+                document.write('請填寫內容');
+                break;
+            case '1':
+                document.write('星期一');
+                break;
+            case '2':
+                document.write('星期二');
+                break;
+            case '3':
+                document.write('星期三');
+                break;
+            case '4':
+                document.write('星期四');
+                break;
+            case '5':
+                document.write('星期五');
+                break;
+            case '6':
+                document.write('星期六');
+                break;
+            case '7':
+                document.write('星期日');
+                break;
+            default: /* 以上皆非 */
+                document.write('請輸入正確日期1-7');
+                break;/* 最後一行，可加可不加，建議要加。 */
+        }
+
+
+    </script>
+</body>
+
+</html>

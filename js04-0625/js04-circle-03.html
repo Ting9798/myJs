@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //迴圈第一層用i > j >k
+        //i++ =>i+1
+        //i-- =>i-1
+        for (let i = 1; i <= 5;  i ++) {
+            console.log(i);
+        }
+        for (let i = 1; i <= 5;  i ++) {
+            console.log('*');
+            console.log('<br>');
+        }
+
+        // let tot = 0;
+        // let i = 1;      //i=1
+        // tot = tot + i;  //tot=0+1=1
+        // i = 2;          //i=2
+        // tot = tot + i;  //tot=1+2=3
+        // i = 3;          //i=3
+        // tot = tot + i;  //tot=3+3=6
+
+        let s = 0;
+        let i ;
+        for ( i = 1; i <= 10; i++) {
+            s = s + i; //累計
+        }
+        //迴圈結束後顯示結果
+        document.write(`1+2+3+...+10=${s}<br>`);
+        document.write(`i=${i}`);
+    </script>
+</body>
+
+</html>

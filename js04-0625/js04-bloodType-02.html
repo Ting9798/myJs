@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 輸入血型 */
+        let blood = prompt('請輸入您的血型', 'if-else-if');
+        console.log(blood);
+        //trim() =>去除內容前後多於空白，中間空白無法去除
+
+        //if-else-if
+        if (blood == null) {
+            document.write('請確認');
+        } else {
+            blood = blood.trim().toUpperCase();
+            console.log(blood);
+            if (blood == '') { //去除空白後的結果是沒有內容
+                document.write('請填寫血型');
+            } else if (blood == 'A') {
+                document.write('A型');
+            } else if (blood == 'B') {
+                document.write('B型');
+            } else if (blood == 'O') {
+                document.write('O型')
+            } else if (blood == 'AB') {
+                document.write('AB型')
+            } else {
+                document.write('請寫入正確血型');
+            }
+        }
+        //換行
+        document.write('<br>');
+
+        //switch
+        let blood2 = prompt('請輸入您的血型', 'switch');
+        if (blood2 == null) {
+            console.log('請確認');
+        } else {
+            switch (blood2.trim().toUpperCase()) {
+                case '':
+                    document.write('請填寫血型');
+                    break;
+                case 'A':
+                    document.write('A型');
+                    break;
+                case 'B':
+                    document.write('B型');
+                    break;
+                case 'O':
+                    document.write('O型');
+                    break;
+                case 'AB':
+                    document.write('AB型');
+                    break;
+                default:
+                    document.write('請填入正確血型');
+                    break;
+            }
+        }
+        
+        /*
+        if (blood2 == null) {
+            document.write('請確認');
+        } else {
+            switch (blood2.trim()) {
+                case '':
+                    document.write('請填寫血型');
+                    break;
+                case 'a':
+                case 'A':
+                    document.write('A型');
+                    break;
+                case 'b':
+                case 'B':
+                    document.write('B型');
+                    break;
+                case 'o':
+                case 'O':
+                    document.write('O型');
+                    break;
+                case 'AB':
+                case 'aB':
+                case 'Ab':
+                case 'ab':
+                    document.write('AB型');
+                    break;
+                default:
+                    document.write('請填入正確血型');
+                    break;
+            }
+        }
+        */
+        
+    </script>
+</body>
+
+</html>
