@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let bingo = 20;
+
+        for (let i = 1; i <= 3; i++) {
+            let result = prompt('請輸入數值');
+            if (result == bingo) {
+                document.write(`第${i}次:${result}<br>答對了`);
+                result.prompt();
+            } else {
+                document.write(`第${i}次:${result}<br>`);
+                if(i==3){
+                    document.write('挑戰失敗');
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
