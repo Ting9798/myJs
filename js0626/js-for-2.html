@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str3 = '';
+        let str3b = '';
+        let tot3 = 0;
+
+        let str5 = '';
+        let str5b = '';
+        let tot5 = 0;
+        for (let i = 1; i <= 10; i++) {
+            if (i % 3 === 0) {
+                str3 += i + ' ';
+                str3b += i;
+                if (i != 9) {
+                    str3b = str3b + '+';
+                }
+                tot3 += i;
+
+            } else if (i % 5 === 0) {
+                str5 += i + ' ';
+                str5b += i;
+                if (i != 10) {
+                    str5b = str5b + '+';
+                }
+                tot5 += i;
+            }
+        }
+        document.write(`1-10中3的倍數有=>${str3}<br>`);
+        document.write(`1-10中3的倍數合計為:${str3b}=${tot3}<br>`);
+        document.write(`1-10中5的倍數有=>${str5}<br>`);
+        document.write(`1-10中5的倍數合計為:${str5b}=${tot5}<br>`);
+
+    </script>
+</body>
+
+</html>

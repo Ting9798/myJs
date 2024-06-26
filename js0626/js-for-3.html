@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // //彈出視窗
+        // //輸入運算起始值
+        let a = Number(prompt(`請輸入起始值`));
+        // //輸入運算結束值
+        let b = Number(prompt(`請輸入結束值`));
+        //交換
+        if (a > b) {
+            let tmp = a;
+            a = b;
+            b = tmp;
+        }
+
+        let tota = 0, totb = 0;
+
+        // //算出奇數合
+        for (let i = a; i <= b; i++) {
+            if (i % 2 === 0) {
+                tota += i;
+            } else {
+                totb += i;
+            }
+        }
+
+
+        // if (a < b) {
+        //     for (let i = a; i <= b; i++) {
+        //         if (i % 2 === 0) {
+        //             tota += i;
+        //         } else {
+        //             totb += i;
+        //         }
+        //     }
+        // } else {
+        //     for (let i = b; i <= a; i++) {
+        //         if (i % 2 === 0) {
+        //             tota += i;
+        //         } else {
+        //             totb += i;
+        //         }
+        //     }
+        // }
+
+
+        //算出偶數合
+        document.write(`${a}-${b}偶數合=${tota}<br>`);
+        document.write(`${a}-${b}奇數合=${totb}<br>`);
+
+    </script>
+</body>
+
+</html>
