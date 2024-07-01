@@ -9,18 +9,32 @@
 
 <body>
     <script>
-        let bingo = 20;
+        // let bingo = 20;
 
+        // for (let i = 1; i <= 3; i++) {
+        //     let result = Number(prompt('請輸入數值'));
+        //     document.write(`第${i}次:${result}<br>`);
+        //     if (result == bingo) {
+        //         document.write(`答對了`);
+        //         break;
+        //     } else if (i == 3) {
+        //             document.write('挑戰失敗');
+        //         }
+        //     }
+
+        let ans = 'n'; //設一變數為答錯
         for (let i = 1; i <= 3; i++) {
-            let result = Number(prompt('請輸入數值'));
+            let result = prompt('請輸入數字');
             document.write(`第${i}次:${result}<br>`);
-            if (result == bingo) {
-                document.write(`答對了`);
-                break;
-            } else if (i == 3) {
-                    document.write('挑戰失敗');
-                }
+            if (result == '20') {
+                document.write('答對了');
+                ans = 'y';  //答對時，改變變數
+                break; //中斷迴圈
             }
+        }
+        if (ans == 'n') {
+            document.write('挑戰失敗');
+        }
     </script>
 </body>
 

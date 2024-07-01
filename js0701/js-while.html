@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1-10合計(for迴圈)
+        let a = 0;
+        for (let i = 1; i <= 10; i++) {
+            a += i;
+            // document.write(`i=${i} a=${a}<br>`);
+        }
+        document.write(`a=${a}`);
+        document.write('<br>');
+        //1-10合計(while迴圈)
+        /*  
+            檢查 > 執行
+            while(進入迴圈的條件){
+                ...
+            }
+        */
+        let b = 0;
+        let i = 1;
+        while (i <= 10) {
+            b += i;
+            i++;
+        }
+        document.write(`b=${b}`);
+
+    </script>
+</body>
+
+</html>

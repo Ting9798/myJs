@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1-100中5的倍數值，並加總
+        //合計>50停止迴圈
+
+        //for迴圈
+        let a = 0;
+        for (let i = 1; i <= 100; i++) {
+            if (i % 5 === 0) {
+                a += i;
+                document.write(`i=${i} a=${a}<br>`);
+            } else if (a > 50) {
+                break;
+            }
+        }
+        document.write(`<br>`);
+        //while迴圈
+        let i = 1;
+        a = 0;
+        // while (i <= 100) {
+        //     if (i % 5 === 0) {
+        //         a += i;
+        //         document.write(`i=${i} a=${a}<br>`);
+        //         if (a > 50) {
+        //             break;
+        //         }
+        //     }
+        //     i++;
+        // }
+
+        while (a <= 50) {
+            if (i <= 100 && i % 5 === 0) {
+                a+=i;
+                document.write(`i=${i} a=${a}<br>`);
+            }
+            i++;
+        }
+
+        document.write(`<br>`);
+        //do while迴圈
+        i = 1;
+        a = 0;
+        do {
+            if (i % 5 === 0) {
+                a += i;
+                document.write(`i=${i} a=${a}<br>`);
+                if (a > 50) {
+                    break;
+                }
+            }
+            i++;
+        } while (i <= 100);
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
