@@ -39,7 +39,7 @@
 
         while (a <= 50) {
             if (i <= 100 && i % 5 === 0) {
-                a+=i;
+                a += i;
                 document.write(`i=${i} a=${a}<br>`);
             }
             i++;
@@ -49,17 +49,23 @@
         //do while迴圈
         i = 1;
         a = 0;
+        // do {
+        //     if (i % 5 === 0) {
+        //         a += i;
+        //         document.write(`i=${i} a=${a}<br>`);
+        //         if (a > 50) {
+        //             break;
+        //         }
+        //     }
+        //     i++;
+        // } while (i <= 100);
         do {
-            if (i % 5 === 0) {
-                a += i;
+            if (i <= 100 && i % 5 === 0){
+                a+=i;
                 document.write(`i=${i} a=${a}<br>`);
-                if (a > 50) {
-                    break;
-                }
             }
             i++;
-        } while (i <= 100);
-
+        } while (a <= 50);
 
 
 
