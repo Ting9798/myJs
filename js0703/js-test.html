@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //設計一個函式能夠四則運算
+        // let inputA = Number(prompt('請輸入數值'));
+        // let inputB = Number(prompt('請輸入數值'));
+        let inputA = prompt('請輸入數值1');
+        let inputB = prompt('請輸入數值2');
+        let inputC = prompt('請輸入運算符號(+,-,*,/)').trim();
+
+
+        //null -> 取消
+        //isNaN->非數字 (is Not a Number)
+        //trim ->刪除多餘空白
+        if (inputA == null || inputB == null || inputC == null) {
+            document.write('取消');
+        } else if (isNaN(inputA) || isNaN(inputB)) {
+            document.write('請輸入數字');
+        } else {
+            inputA = Number(inputA.trim());
+            inputB = Number(inputB.trim());
+
+            calc(inputA, inputB, inputC);
+        }
+
+        function calc(a, b, c) {
+            if (c == '+') {
+                document.write(`${a}+${b}=${a + b}`);
+            } else if (c == '-') {
+                document.write(`${a}-${b}=${a - b}`);
+            } else if (c == '*') {
+                document.write(`${a}*${b}=${a * b}`);
+            } else if (c == '/') {
+                document.write(`${a}/${b}=${(a / b).toFixed(2)}`);
+            } else {
+                document.write('運算式錯誤');
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

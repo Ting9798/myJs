@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //函式宣告與使用
+        
+        //無參數，無傳回值
+        //建立打招呼函式
+        function sayHi(){
+            // alert('Hi');
+            document.write('Hi<br>'); //比hehe早執行
+            console.log('Hehe');
+        }
+        //呼叫函式 => 函式名稱
+        sayHi()
+
+        //有參數，無傳回值
+        function sayBye(strName){
+            document.write('Bye'+strName+'，謝謝光臨');
+        }
+        sayBye(prompt('你的名字'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //函式 =>請輸入成績n次直到輸入-1結束或取消
+        /*
+            第一次分數:
+            第二次分數:
+            第三次分數:
+            第四次分數:
+            ----------
+            及格人數:
+            不及格人數:
+                總分:
+                總平均:
+        */
+        let count = 0;
+        let pass = 0;
+        let fail = 0;
+        let tot = 0;
+
+        while (true) {  //不需要執行迴圈的條件
+            let score = prompt('請輸入分數');
+            if (score === '-1' || score == null) {
+                break;
+            }
+            //如非數字，不再往下
+            if(isNaN(score)){
+                alert('非數值請重新填入');
+                continue;   //彈回迴圈頭
+            }
+            //轉化為數值
+            score = Number(score);
+            
+            //判斷分數是否為有效分數
+            if (score < 0 || score > 100) {
+                alert('非有效分數請重新填入');
+                continue;
+            }
+            //是否及格
+            if (score >= 60) {
+                pass++;
+            } else {
+                fail++;
+            }
+            //總分
+            tot += score;
+
+            count++;
+            document.write(`第${count}次分數:${score}分<br>`);
+        }
+        document.write('----------------<br>');
+        document.write(`及格人數:${pass}<br>`);
+        document.write(`不及格人數:${fail}<br>`);
+        document.write(`總分:${tot}<br>`);
+        document.write(`總平均:${(tot / (pass + fail)).toFixed(2)}<br>`);
+    </script>
+</body>
+
+</html>

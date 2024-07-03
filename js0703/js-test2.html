@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //函式 =>請輸入成績n次直到輸入-1結束或取消
+        /*
+            第一次分數:
+            第二次分數:
+            第三次分數:
+            第四次分數:
+            ----------
+            及格人數:
+            不及格人數:
+                總分:
+                總平均:
+        */
+        let sNum = prompt('請輸入分數');
+        let a = 0;
+        if (sNum == null || sNum == '-1') {
+            document.write('----------<br>');
+        } else {
+            a = 1;
+        }
+
+        function chkScore(inputNum) {
+            sNum = Number(sNum);
+            tot += sNum;
+            if (inputNum >= 60) {
+                pNum++;
+            } else {
+                fNum++;
+            }
+        }
+
+        let count = 0;
+        let pNum = 0;
+        let fNum = 0;
+        let tot = 0;
+        while (a !== 0) {
+            count++;
+            let result = chkScore(sNum);
+            document.write(`第${count}次分數:${sNum}<br>`);
+            sNum = prompt('請輸入分數');
+            if (sNum == null || sNum == '-1') {
+                document.write('----------<br>');
+                document.write(`及格人數:${pNum}人<br>`);
+                document.write(`不及格人數:${fNum}人<br>`);
+                document.write(`總分:${tot}<br>`);
+                document.write(`總平均:${(tot / (pNum + fNum)).toFixed(2)}<br>`);
+                a = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>
