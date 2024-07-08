@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //陣列
+        //一維陣列 => 全熟
+        //陣列編號從0開始
+        let arr1 = [50, 90, 100, 30, 60];
+        console.log('陣列長度為:' + arr1.length);
+        console.log('陣列編號2值為:' + arr1[2]);
+
+        //改變陣列的值
+        arr1[2] = 65;
+        console.log('陣列編號2改變後的值為:' + arr1[2]);
+
+        //使用迴圈顯示arr1所有編號值
+        console.log('----for----');
+        for (let i = 0; i < arr1.length; i++) {
+            console.log(`陣列編號${i}值為:${arr1[i]}`);
+        }
+
+        console.log('----while----');
+        let j = 0;
+        while (j < arr1.length) {
+            console.log(`陣列編號${j}值為:${arr1[j]}`);
+            j++;
+        }
+
+        console.log('----do while----');
+        j = 0;
+        do {
+            console.log(`陣列編號${j}值為:${arr1[j]}`);
+            j++;
+        } while (j < arr1.length)
+
+        console.log('----比大小----');
+        let min = arr1[0];
+        let max = arr1[0];
+        for (let i = 1; i < arr1.length; i++) {
+            if (arr1[i] > max) {
+                max = arr1[i];
+            } else if (arr1[i] < min) {
+                min = arr1[i];
+            }
+        }
+        console.log(`最大值:${max}`);
+        console.log(`最小值:${min}`);
+
+        //50, 90, 65, 30, 60
+        console.log('----遞增----');
+        for (let i = 0; i < arr1.length; i++) {
+            for (let j = 0; j < i; j++) {
+                if (arr1[j] > arr1[j + 1]) {
+                    let tmp = arr1[j];
+                    arr1[j] = arr1[j + 1];
+                    arr1[j + 1] = tmp;
+                    i--;
+                    
+                }
+                
+            }
+        }
+        console.log(arr1);
+
+    </script>
+</body>
+
+</html>

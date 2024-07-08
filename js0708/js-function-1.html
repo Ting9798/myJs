@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //由於參數預設值為undefined (空值)
+        let tot5 = (n1, n2) => {
+            console.log(n1 + n2);
+        }
+        tot5(); /* 回傳值=NaN */
+        tot5(5); /* 回傳值=NaN */
+        // tot5(,5); 回傳值=NaN 不行只給n2值
+        tot5(5, 3, 2);/* 回傳值=8 n1=5,n2=3 2無對象*/
+
+        //所以設定函數時，給予預設參數 (避免空值發生)
+        let tot6 = (n1=1, n2=1) => {
+            console.log(n1 + n2);
+        }
+        tot6(); /* 回傳值=2 */
+        tot6(5); /* 回傳值=6 n1=5,n2=1 */
+        tot6(5, 3, 2);/* 回傳值=8 n1=5,n2=3 2無對象*/
+    </script>
+</body>
+
+</html>

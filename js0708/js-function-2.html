@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //具名參數
+        //使用物件型別{}穿送資料給指定參數
+        //所以接收資料的函式參數也要使用物件型別{}接收
+        function tot7({ n1 = 0, n2 }) {
+            console.log(n1 + n2);
+        }
+        
+        tot7({ n2: 4 }); //指定給值
+        tot7({ n2: 4, n1: 3 }); //不按照順序給值
+
+    </script>
+</body>
+
+</html>
