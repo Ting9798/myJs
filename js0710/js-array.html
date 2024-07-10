@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //建立陣列三種方式
+
+        //方法一
+        let arr1 = [1, 2, 3, 4, 5];
+        console.log(arr1);
+        //方法二
+        let arr2 = new Array();
+        arr2[0] = 'a';
+        arr2[1] = 6;
+        console.log(arr2);
+        //方法三
+        let arr3 = new Array('b',8,true,null,{x:1,y:3}); //大括號內為物件
+        console.log(arr3);
+
+        //合法的陣列宣告
+        //以const宣告 無法改變長度與內容
+        const arr4 = [];
+        //空陣列
+        let arr5 = [];
+        //數值陣列
+        let arr6 = [0,1,2];
+        //字串陣列
+        let arr7 = ['a','b','c'];
+        //混和陣列
+        let arr8 = ['d',3,['陣列裡面可以有陣列','真多'],{book:'也可以有物件'}]
+        console.log(arr8);
+
+        //物件
+        let obj1={
+            x:5,y:'3'
+        }
+        console.log(typeof(obj1.x));
+        console.log(typeof(arr8[0]));
+    </script>
+</body>
+
+</html>

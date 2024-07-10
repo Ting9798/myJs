@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //只顯示奇數
+        let arr1 = [1, 2, 3, 4, 5];
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] % 2 === 1) {
+                console.log(arr1[i]);
+            }
+        }
+
+        //只保留奇數
+        let arr2 = [55, 3, 40, 65, 90];
+        const odds = arr2.filter((n) => {
+            if (n % 2 === 1) {
+                return true;
+            }
+            return false;
+        });
+        console.log(odds);
+
+        let arr3 = [55, 3, 40, 65, 90];
+        const odds2 = arr2.filter((n) => {
+            //大括號在一行的情況下可以省略
+            // if (n % 2 === 0)
+            //     return true;
+
+            //再簡化
+            return n % 2 === 0;
+        });
+        console.log(odds2);
+
+    </script>
+</body>
+
+</html>

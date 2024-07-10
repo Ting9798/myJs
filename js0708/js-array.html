@@ -11,7 +11,7 @@
     <script>
         //陣列
         //一維陣列 => 全熟
-        //陣列編號從0開始
+        //陣列編號(索引值/index)從0開始
         let arr1 = [50, 90, 100, 30, 60];
         console.log('陣列長度為:' + arr1.length);
         console.log('陣列編號2值為:' + arr1[2]);
@@ -62,9 +62,7 @@
                     arr1[j] = arr1[j + 1];
                     arr1[j + 1] = tmp;
                     i--;
-                    
                 }
-                
             }
         }
         console.log(arr1);

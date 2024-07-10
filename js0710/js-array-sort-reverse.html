@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr1 = [20, 99, 60, 80, 2, 100];
+        console.log('排序前：' + arr1);
+        //遞增
+        arr1.sort();
+        console.log('排序後：' + arr1);
+
+        arr1.sort((a,b) => {
+            return a-b; /* A到B遞增 */
+
+        });
+        console.log('sort遞增排序後：' + arr1);
+
+        //遞減
+        arr1.sort((a,b) => {
+            return b-a; /* B到A遞減 */
+
+        });
+        console.log('sort遞減排序後：' + arr1);
+
+        arr1.reverse(); //反轉
+        console.log('reverse遞增排序後：' + arr1);
+    </script>
+</body>
+
+</html>
