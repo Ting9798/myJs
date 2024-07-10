@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //顯示所有值
+        let arr = [1, 2, 3, 4, 5, '12345'];
+        //迴圈
+        let i;
+        for (i = 0; i < arr.length; i++) {
+            console.log(`for迴圈:${arr[i]}`);
+        }
+
+        i = 0;
+        while (i < arr.length) {
+            console.log(`while迴圈:${arr[i]}`);
+            i++;
+        }
+
+        i = 0;
+        do {
+            console.log(`do while迴圈:${arr[i]}`);
+            i++;
+        } while (i < arr.length)
+
+        //map =>陣列型態
+        let arrMap = arr.map((n) => n);
+        console.log(arrMap);
+
+        //for of
+        //一個方法 將 arr 數值丟給 j
+        //for(let 變數名稱(使用陣列的值) of陣列名稱)
+        for (let j of arr) {
+            console.log(`for of:${j}`);
+        }
+
+        //forEach
+        arr.forEach((n) => console.log(`forEach:${n}`));
+
+        //顯示字串中的值
+        //for
+        for (let i = 0; i < arr.length; i++) {
+            if (typeof (arr[i]) === "string") {
+                console.log(`字串:${arr[i]}`);
+            }
+        }
+        //for of
+        for (let s of arr) {
+            if (typeof (s) === "string") {
+                console.log(`字串:${s}`);
+            }
+        }
+        //forEach
+        arr.forEach((s) => {
+            if (typeof (s) === "string")
+                console.log(`字串:${s}`)
+        });
+        //map
+
+        let sMap = arr.map((s) => {
+            if (typeof (s) === "string") {
+                console.log(`字串:${s}`);
+            }
+        })
+    </script>
+</body>
+
+</html>
