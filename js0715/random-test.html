@@ -9,13 +9,14 @@
 
 <body>
     <script>
+        let lotto
         let sNum = Math.floor(Math.random() * 100);
-        
+
         let arr1 = [sNum];
         console.log('特別號:' + sNum);
         let i = 1;
         for (let j = 1; j <= 5; j++) {
-            while (i <= 5) {
+            while (i <= 6) {
                 let Num1 = Math.floor(Math.random() * 100);
                 //判斷產生結果是否有在陣列中
                 let result = arr1.indexOf(Num1);
