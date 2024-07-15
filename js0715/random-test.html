@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let sNum = Math.floor(Math.random() * 100);
+        
+        let arr1 = [sNum];
+        console.log('特別號:' + sNum);
+        let i = 1;
+        for (let j = 1; j <= 5; j++) {
+            while (i <= 5) {
+                let Num1 = Math.floor(Math.random() * 100);
+                //判斷產生結果是否有在陣列中
+                let result = arr1.indexOf(Num1);
+                //如果沒有
+                if (result === -1) {
+                    //再判斷是否大於1小於49   
+                    if (Num1 >= 1 && Num1 <= 49) {
+                        //條件吻合就放入陣列
+                        arr1.push(Num1);
+                        i++;
+                    }
+                }
+            }
+            arr1.sort((a, b) => {
+                return a - b;
+            });
+            console.log(arr1);
+            i=1;
+            arr1=[sNum];
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
