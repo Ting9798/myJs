@@ -18,18 +18,20 @@
         }
         //設定特別號
         let sNum = lottoNum();
-        let arr1 = [sNum];
+        let arr1 = [];
         console.log('特別號 : ' + sNum);
 
-        //亂數取得6個號碼，並且不能跟特別號一樣
+        //亂數取得6個號碼
         for (let i = 1; i <= 6; i++) {
             //取得亂數
             let num = lottoNum();
             //尋找陣列中是否存在
-            let result = arr1.indexOf(lottoNum());
+            let result = arr1.indexOf(num);
             //如果不存在就將號碼加入
-            if (result == -1 && num!=sNum) {
+            if (result == -1 ) {
                 arr1.push(num);
+            }else{
+                i--;
             }
         }
         //遞增排序

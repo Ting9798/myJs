@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //物件模組化 => 字首大寫
+        //建立物件樣板 =>Mobile
+        function Mobile(brand, color, size,) {
+            //等號右邊為外面傳進來的參數，左邊為物件的屬性
+            this.brand = brand;
+            this.color = color;
+            this.size = size;
+            this.showMsg = function () {
+                console.log(`品牌:${this.brand}\n顏色:${this.color}\n尺寸:${this.size}`);
+            }
+        }
+        let m1 = new Mobile(prompt('請輸入手機品牌名稱'),prompt('請輸入手機顏色'),prompt('請輸入手機尺寸'));
+        m1.showMsg(); 
+        let m2 = new Mobile(prompt('請輸入手機品牌名稱'),prompt('請輸入手機顏色'),prompt('請輸入手機尺寸'));
+        m2.showMsg();
+    </script>
+</body>
+
+</html>

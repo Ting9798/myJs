@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arrNum = [];
+        //亂數取出1-49中的六個號碼
+        // for (let i = 0; i < 6; i++) {
+        //     //取亂數
+        //     let rNum = Math.floor(Math.random() * 49) + 1;
+        //     //檢查陣列中是否存在
+        //     if (arrNum.indexOf(rNum) == -1) {
+        //         //不重複的話，就加入
+        //         arrNum.push(rNum);
+        //     }else{
+        //         //重複的話
+        //         i--;
+        //     }
+        // }
+        //let i = 0;
+        // while (i < 6) {
+        //     let Num = Math.floor(Math.random() * 49) + 1;
+        //     if (arrNum.indexOf(Num) == -1) {
+        //         arrNum.push(Num);
+        //         i++;
+        //     }
+        // }
+        let i = 0;
+        do {
+            let Num = Math.floor(Math.random() * 49) + 1;
+            if (arrNum.indexOf(Num) == -1) {
+                arrNum.push(Num);
+                i++;
+            }
+        } while (i < 6);
+
+        arrNum.sort((a,b) => {
+            return a-b;
+        });
+        console.log(arrNum);
+
+        let sNum = Math.floor(Math.random() * 49) + 1;
+        console.log('特別號 : ' + sNum);
+
+    </script>
+</body>
+
+</html>

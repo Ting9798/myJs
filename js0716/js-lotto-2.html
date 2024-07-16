@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //取亂數
+        function getRandomNum() {
+            return Math.floor(Math.random() * a) + 1;
+        }
+        //取特別號
+        function getsNum() {
+            return console.log('特別號 : ' + (Math.floor(Math.random() * b) + 1));
+        }
+        //產生號碼
+        function getLotNum() {
+            let arrNum = [];
+            let i = 0;
+            do {
+                let lotNum = getRandomNum();
+                if (arrNum.indexOf(lotNum) == -1) {
+                    arrNum.push(lotNum);
+                    i++;
+                }
+            } while (i < n);
+            arrNum.sort((a, b) => {
+                return a - b;
+            });
+            console.log(arrNum);
+        }
+
+        //大樂透: 1-49 =>6 1-49=>1
+        //威力彩: 1-38 =>6 1-8 =>1
+        //今彩539:1-39 =>5
+        while (true) {
+            let lotGameNo = prompt('請輸入樂透號碼代號\n1.大樂透 2.威力彩 3.今彩539');
+
+            if (lotGameNo == null || lotGameNo == '') {
+                alert('請勿空白');
+                continue;
+            } else if (lotGameNo == '1') {
+                n = 6;
+                a = 49;
+                b = 49;
+                getsNum();
+                break;
+            } else if (lotGameNo == '2') {
+                n = 6;
+                a = 38;
+                b = 8;
+                getsNum();
+                break;
+            } else if (lotGameNo == '3') {
+                n = 5;
+                a = 39;
+                break;
+            } else {
+                alert('查無代碼，請重新輸入');
+                continue;
+            }
+        }
+
+
+
+        // 跳脫字元符號 => \n 換行
+        getLotNum();
+
+
+
+    </script>
+</body>
+
+</html>
