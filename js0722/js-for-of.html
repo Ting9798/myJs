@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function StuObj(sid, sName, css, html, js,...other) {
+            this.sid = sid;
+            this.sName = sName;
+            this.css = css;
+            this.html = html;
+            this.js = js;
+            this.showMsg = function () {
+                console.log(`${this.sid}${this.sName}同學 總分為${this.css + this.html + this.js}分`);
+                console.log(`幹部:${other[0]}`);
+            }
+        };
+
+        let s1 = new StuObj('s001', '王曉日', 100, 100, 100,'班長');
+        s1.showMsg();
+        let s2 = new StuObj('s002', '王曉月', 99, 99, 99);
+        s2.showMsg();
+        let s3 = new StuObj('s003', '王曉明', 98, 98, 98);
+        s3.showMsg();
+        // console.log(`css班級總分為${s1.css + s2.css + s3.css}`);
+        // console.log(`html班級總分為${s1.html + s2.html + s3.html}`);
+        // console.log(`js班級總分為${s1.js + s2.js + s3.js}`);
+
+        //陣列
+        let arrObj = [s1, s2, s3];
+        let totCss = 0, totHtml = 0, totJs = 0;
+        for (let i = 0; i < arrObj.length; i++) {
+                totCss += arrObj[i].css;
+                totHtml += arrObj[i].html;
+                totJs += arrObj[i].js;
+            }
+        console.log('css總分為' + totCss);
+        console.log('html總分為' + totHtml);
+        console.log('js總分為' + totJs);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //其餘參數
+        function add(...number) {
+            let tot = 0;
+
+            // for (let i = 0; i < number.length; i++) {
+            //     tot += number[i];
+            // }
+
+            for (let num of number) {
+                tot += num;
+            }
+            return tot;
+        }
+        let num1 = Number(prompt('請輸入數值'));
+        let num2 = Number(prompt('請輸入數值'));
+        console.log(add(num1, num2));
+
+    </script>
+</body>
+
+</html>
