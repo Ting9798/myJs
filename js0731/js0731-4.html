@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" id="txt">
+        <input type="button" id="btn" value="送出">
+    </form>
+
+    <ul>
+        <li>HTML</li>
+    </ul>
+
+    <script>
+        // 取得按鈕
+        let myBtn = document.querySelector('#btn');
+        myBtn.addEventListener('click', () => {
+            // 取得文字方塊
+            let newList = document.querySelector('#txt');
+
+            // 建立節點
+            let newElm = document.createElement('li');
+            // 建立文字節點
+            let newText = document.createTextNode(newList.value);
+            // 將文字節點加入新節點
+            newElm.appendChild(newText);
+            // 取得要加入新節點
+            let getUl = document.querySelector('ul');
+            getUl.appendChild(newElm);
+        });
+
+    </script>
+</body>
+
+</html>

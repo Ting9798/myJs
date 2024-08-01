@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #Sel{
+            color: aqua;
+        }
+
+        #notSel{
+            color: slateblue;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        請選擇飲料:
+        <script>
+            let arrdrink = ['冰美式', '冰拿鐵', '冰紅茶','紅茶'];
+            for (let i = 0; i < arrdrink.length; i++) {
+                document.write(`<input type="checkbox" name='drinks' value=${arrdrink[i]} >${arrdrink[i]}`)
+            }
+        </script>
+        <input type="button" id='btn' value="送出">
+
+        <div id="showDrinks"></div>
+
+    </form>
+    <script src="./js0731-test.js"></script>
+</body>
+
+</html>
