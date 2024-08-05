@@ -46,7 +46,7 @@
 <body>
     <div>
         <form action="">
-            <input type="text" id="myImput">
+            <input type="text" id="myInput">
             <input type="button" id="btn" value="送出">
             <input type="button" id="btnClr" value="刪除">
         </form>
@@ -89,7 +89,7 @@
             //動態新增li元素
             var li = document.createElement('li');
             // 取得文字方塊內容
-            var inputValue = document.getElementById('myImput').value;
+            var inputValue = document.getElementById('myInput').value;
 
             // 建立文字節點
             var t = document.createTextNode(inputValue);
@@ -109,20 +109,16 @@
                 span.appendChild(txt);
                 li.appendChild(span);
 
-                let myClear = document.getElementsByTagName('span');
-                for (i = 0; i < close.length; i++) {
-                    myClear[i].onclick = function () {
-                        console.log(myClear[i]);
+                let clearBtn = document.getElementsByClassName('clear');
+                for (let i = 0; i < clearBtn.length; i++) {
+                    clearBtn[i].onclick = function () {
+                        let removeLi = clearBtn[i].parentElement;
+                        removeLi.remove();
+                        console.log(removeLi);
                     }
                 }
             }
-            document.getElementById('myImput').value == '';
-
-
-
-
-
-
+            document.getElementById('myInput').value == '';
         });
     </script>
 </body>
