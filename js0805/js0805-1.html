@@ -60,8 +60,7 @@
         //針對現有的li項目產生li後的刪除文字
         //新增節點
         let myNodelist = document.getElementsByTagName('li');
-        let i;
-        for (i = 0; i < myNodelist.length; i++) {
+        for (let i = 0; i < myNodelist.length; i++) {
             var span = document.createElement('span');
             var txt = document.createTextNode('X');
             //新增類別名稱
