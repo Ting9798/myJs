@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    span:hover{
+        cursor: pointer;
+        color:brown;
+    }
+</style>
+</head>
+
+<body>
+    <div>
+        <span onclick="changAbout();">About</span>
+        <span onclick="changExps();">Express</span>
+        <span onclick="changContact();">Contact</span>
+        <span onclick="changNews();">News</span>
+    </div>
+
+    <hr>
+    <div id="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et facere exercitationem asperiores
+        distinctio est vel consequatur quod cumque error autem incidunt voluptatibus doloremque, sunt placeat a? Natus,
+        tenetur voluptatem! Veritatis.</div>
+    <div id="exps" style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quibusdam
+        pariatur ut unde quidem! Numquam voluptatum, officiis, esse suscipit iste perspiciatis consequatur ratione minus
+        odit asperiores molestias molestiae voluptas! Architecto.</div>
+    <div id="contact" style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est aspernatur
+        repellat quisquam voluptate beatae ipsam. Aut molestias adipisci, nihil laboriosam quos reiciendis sapiente,
+        fugiat sunt dolorum placeat accusantium voluptas odit?</div>
+    <div id="news" style="display: none;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae quo
+        cumque culpa tempore temporibus, ipsa minima doloremque quaerat architecto exercitationem vero quae officiis
+        tenetur, repellendus odio rerum, autem officia ad.</div>
+
+    <script>
+        let aboutDiv = document.getElementById('about');
+        let expsDiv = document.getElementById('exps');
+        let contactDiv = document.getElementById('contact');
+        let newsDiv = document.getElementById('news');
+
+        function clearDiv() {
+            aboutDiv.style.display = 'none';
+            expsDiv.style.display = 'none';
+            contactDiv.style.display = 'none';
+            newsDiv.style.display = 'none';
+        }
+
+        function changAbout() {
+            clearDiv();
+            aboutDiv.style.display = 'block';
+        }
+        function changExps() {
+            clearDiv();
+            expsDiv.style.display = 'block';
+        }
+        function changContact() {
+            clearDiv();
+            contactDiv.style.display = 'block';
+        }
+        function changNews() {
+            clearDiv();
+            newsDiv.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

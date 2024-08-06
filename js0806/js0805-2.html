@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div onclick="changeDiv();">點點看</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis reprehenderit harum corrupti eligendi laboriosam
+        ipsum atque ratione, quo, voluptatem iusto ab repellat dignissimos, qui quidem doloremque? Quod quibusdam
+        consequuntur illum.</p>
+
+    <div onclick="changeDiv2();">再點點看</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis reprehenderit harum corrupti eligendi laboriosam
+        ipsum atque ratione, quo, voluptatem iusto ab repellat dignissimos, qui quidem doloremque? Quod quibusdam
+        consequuntur illum.</p>
+
+    <div onclick="changeDiv3();">還敢點嗎</div>
+    <p id="changeDiv3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis reprehenderit harum corrupti
+        eligendi laboriosam
+        ipsum atque ratione, quo, voluptatem iusto ab repellat dignissimos, qui quidem doloremque? Quod quibusdam
+        consequuntur illum.</p>
+
+    <div onclick="changeDiv4();">繼續點</div>
+    <p class="changeDiv4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis reprehenderit harum corrupti
+        eligendi laboriosam
+        ipsum atque ratione, quo, voluptatem iusto ab repellat dignissimos, qui quidem doloremque? Quod quibusdam
+        consequuntur illum.</p>
+    <script>
+        // 取得段落1
+        // console.log(document.querySelector("p"));
+        // 取得所有段落1
+        // console.log(document.querySelectorAll("p"));
+        // 取得所有段落2
+        // console.log(document.getElementsByTagName('p')[1]);
+
+        function changeDiv() {
+            document.querySelector('p').innerHTML = '還真點？';
+        }
+        function changeDiv2() {
+            document.getElementsByTagName('p')[1].innerHTML = '點什麼點';
+        }
+        function changeDiv3() {
+            document.getElementById('changeDiv3').innerHTML = '還敢點';
+        }
+        function changeDiv3() {
+            document.getElementById('changeDiv3').innerHTML = '....';
+        }
+        function changeDiv4() {
+            var changDiv4 = document.getElementsByClassName('changeDiv4')[0].innerHTML = '踹共!';
+        }
+    </script>
+</body>
+
+</html>

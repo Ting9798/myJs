@@ -48,7 +48,6 @@
         <form action="">
             <input type="text" id="myInput">
             <input type="button" id="btn" value="送出">
-            <input type="button" id="btnClr" value="刪除">
         </form>
 
         <ul id="myUl">
@@ -69,27 +68,18 @@
             span.appendChild(txt);
             myNodelist[i].appendChild(span);
         }
-
-        // 刪除第一個li
-        btnClr.addEventListener('click', () => {
-            //取得第一個li
-            let removeElm = document.getElementsByTagName('li')[0];
-            console.log(removeElm);
-            //找到父元素節點
-            let parentElm = removeElm.parentNode;
-            //從父元素移除第一個li子節點
-            parentElm.removeChild(removeElm);
-
-        });
-        // 刪除對應的li
-        let clearBtn = document.getElementsByClassName('clear');
-        for (i = 0; i < clearBtn.length; i++) {
-            clearBtn[i].onclick = function () {
-                let removeLi = this.parentNode;
+        function delet(element) {
+                let removeLi = element.parentNode;
                 // 刪除線
                 // removeLi.style.textDecoration = 'line-through';
                 // 不顯示(style控制css標籤)
                 removeLi.style.display = 'none';
+            }
+        // 刪除對應的li
+        let clearBtn = document.getElementsByClassName('clear');
+        for (i = 0; i < clearBtn.length; i++) {
+            clearBtn[i].onclick = function () {
+                delet(this);
             }
         }
         // 取得新增按鈕
@@ -120,11 +110,10 @@
                 
                 // 新增動作
                 span.onclick=function(){
-                    removeLi = this.parentNode;
-                    removeLi.style.display='none';
+                    delet(this);
                 }
             }
-            document.getElementById('myInput').value == '';
+            document.getElementById('myInput').value = '';
         });
     </script>
 </body>
